@@ -1,14 +1,26 @@
-import './App.css';
+import "./App.css";
+
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Analysis from "./pages/Analysis";
+import Input from "./pages/Input";
+import NoMatch from "./pages/NoMatch";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Welcome to Budget Buddy!</h1>
-        <p>
-          Future home of Isaac's budget.
-        </p>
+        <p>Future home of Isaac's budget.</p>
       </header>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="analysis" element={<Analysis />} />
+        <Route path="input" element={<Input />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
     </div>
   );
 }
