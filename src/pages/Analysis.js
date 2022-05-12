@@ -1,8 +1,6 @@
-import React from "react";
-
 const Analysis = () => {
   return (
-    <div>
+    <div className="Analysis-main">
       <p>You are at the analysis page.</p>
     </div>
   );

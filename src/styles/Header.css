@@ -1,0 +1,31 @@
+.Header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-title {
+  margin-right: auto;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.headerlink-title {
+  color: #84d8fa;
+  font-style: italic;
+  font-weight: 200;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.headerlink-title-selected {
+  color: #84d8fa;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.headerlink-title:hover,
+.headerlink-title-selected:hover {
+  opacity: 0.5;
+}

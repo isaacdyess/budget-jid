@@ -1,8 +1,6 @@
-import React from "react";
-
 const Input = () => {
   return (
-    <div>
+    <div className="Input-main">
       <p>You are at the input page.</p>
     </div>
   );
