@@ -1,0 +1,10 @@
+.Income-main {
+    text-align: center;
+    background-color: #282c34;
+    color: snow;
+    padding: 1rem;
+  }
+
+.Add-entry-button {
+    height: 2.0rem;
+}

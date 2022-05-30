@@ -1,12 +1,15 @@
 .Header {
   display: flex;
   justify-content: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .header-title {
+  font-size: 1.4rem;
   margin-right: auto;
   text-decoration: none;
-  padding: 0 5px;
+  padding: 0 20px;
 }
 
 .headerlink-title {

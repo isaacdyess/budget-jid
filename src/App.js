@@ -2,8 +2,7 @@ import "./styles/App.css";
 
 import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-
+import Header from "./pages/Header";
 import Home from "./pages/Home";
 import Analysis from "./pages/Analysis";
 import Input from "./pages/Input";
