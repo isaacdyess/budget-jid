@@ -1,11 +1,25 @@
 import "../styles/Input.css";
 
-const TableRow = ({ value, description, category, date }) => {
+const IncomeRow = ({ value, description, account, date }) => {
+  return (
+    <tr className="Input-table-row">
+      <td className="Input-table-value">{value}</td>
+      <td className="Input-table-value">{description}</td>
+      <td className="Input-table-value">{account}</td>
+      <td className="Input-table-value">{date}</td>
+      <button>Edit</button>
+      <button>Delete</button>
+    </tr>
+  );
+};
+
+const ExpenseRow = ({ value, description, category, account, date }) => {
   return (
     <tr className="Input-table-row">
       <td className="Input-table-value">{value}</td>
       <td className="Input-table-value">{description}</td>
       <td className="Input-table-value">{category}</td>
+      <td className="Input-table-value">{account}</td>
       <td className="Input-table-value">{date}</td>
       <button>Edit</button>
       <button>Delete</button>
@@ -14,35 +28,31 @@ const TableRow = ({ value, description, category, date }) => {
 };
 
 const Input = () => {
-  // TODO: make API to get incomes/expenses from a json file (database later down the road)
-  // TODO 2: Add edit and delete functionality
-  // TODO 3: Build add entry functionality
-  // TODO 4: Make formatting suitable
   const incomes = [
     {
       value: "$400",
       description: "Check",
-      category: "Income",
+      account: "Regions",
       date: "5/5/2022",
     },
     {
       value: "$330",
       description: "Dividends",
-      category: "Savings",
+      account: "Regions",
       date: "5/15/2022",
     },
     {
       value: "$100",
       description: "Cash Tips",
-      category: "Income",
+      account: "Fidelity",
       date: "5/20/2022",
     },
   ];
   const incomeRows = incomes.map((income) => (
-    <TableRow
+    <IncomeRow
       value={income.value}
       description={income.description}
-      category={income.category}
+      account={income.account}
       date={income.date}
     />
   ));
@@ -52,26 +62,30 @@ const Input = () => {
       value: "$40",
       description: "Walmart",
       category: "Groceries",
+      account: "Regions",
       date: "5/2/2022",
     },
     {
       value: "$30",
       description: "Target",
       category: "Shopping",
+      account: "CashApp",
       date: "5/7/2022",
     },
     {
       value: "$5",
       description: "Sonic",
       category: "Eating Out",
+      account: "Regions",
       date: "5/13/2022",
     },
   ];
   const expenseRows = expenses.map((expense) => (
-    <TableRow
+    <ExpenseRow
       value={expense.value}
       description={expense.description}
       category={expense.category}
+      account={expense.account}
       date={expense.date}
     />
   ));
@@ -87,13 +101,17 @@ const Input = () => {
             <th className="Expense-table-header">Value</th>
             <th className="Expense-table-header">Description</th>
             <th className="Expense-table-header">Category</th>
+            <th className="Expense-table-header">Account</th>
             <th className="Expense-table-header">Date</th>
           </tr>
         </thead>
         <tbody>{expenseRows}</tbody>
       </table>
 
-      <button className="Add-entry-button">Add Entry</button>
+      <div className="Buttons">
+        <button className="Center-button">Add Entry</button>
+        <button className="Center-button">Options</button>
+      </div>
 
       <table className="Income-table">
         <thead>
@@ -104,7 +122,7 @@ const Input = () => {
           <tr>
             <th className="Income-table-header">Value</th>
             <th className="Income-table-header">Description</th>
-            <th className="Income-table-header">Category</th>
+            <th className="Income-table-header">Account</th>
             <th className="Income-table-header">Date</th>
           </tr>
         </thead>

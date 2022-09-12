@@ -1,10 +1,17 @@
 .Income-main {
     text-align: center;
     background-color: #282c34;
+    display: flex;
+    flex-direction: column;
     color: snow;
     padding: 1rem;
   }
 
-.Add-entry-button {
-    height: 2.0rem;
+.Buttons {
+  flex-direction: column;
+  width: 2rem;
+}
+
+.Center-button {
+    height: 1.8rem;
 }
